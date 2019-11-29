@@ -22,6 +22,10 @@ namespace GerenciamentoDeEstoqueInterface
 
         public void Form1_Load(object sender, EventArgs e)
         {
+            UpdateList(sender, e);
+        }
+        public void UpdateList(object sender, EventArgs e)
+        {
             if (estoqueAtual != null)
             {
                 var produtos = estoqueAtual.GetListaProdutos();
@@ -35,11 +39,6 @@ namespace GerenciamentoDeEstoqueInterface
                     listViewProd.Items.Add(lvi);
                 }
             }
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }
