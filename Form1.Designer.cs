@@ -43,13 +43,14 @@
             this.DemandaAnterior = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DemandaAtual = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DataVencimento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
             Nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // Nome
             // 
             Nome.Text = "Nome";
-            Nome.Width = 88;
+            Nome.Width = 136;
             // 
             // directorySearcher1
             // 
@@ -128,21 +129,32 @@
             // Vendidos
             // 
             this.Vendidos.Text = "Vendidos";
+            this.Vendidos.Width = 115;
             // 
             // DemandaAnterior
             // 
             this.DemandaAnterior.Text = "DemandaAnterior";
-            this.DemandaAnterior.Width = 103;
+            this.DemandaAnterior.Width = 168;
             // 
             // DemandaAtual
             // 
             this.DemandaAtual.Text = "Demanda Atual";
-            this.DemandaAtual.Width = 102;
+            this.DemandaAtual.Width = 134;
             // 
             // DataVencimento
             // 
             this.DataVencimento.Text = "Data Vencimento";
-            this.DataVencimento.Width = 101;
+            this.DataVencimento.Width = 153;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(882, 515);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(254, 29);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Verifica Validade";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -150,6 +162,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1213, 556);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.listViewProd);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -176,6 +189,7 @@
         private System.Windows.Forms.ColumnHeader DemandaAnterior;
         private System.Windows.Forms.ColumnHeader DemandaAtual;
         private System.Windows.Forms.ColumnHeader DataVencimento;
+        private System.Windows.Forms.Button button1;
     }
 }
 

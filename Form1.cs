@@ -40,5 +40,30 @@ namespace GerenciamentoDeEstoqueInterface
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (estoqueAtual != null)
+            {
+                var produtos = estoqueAtual.GetListaProdutos();
+                listViewProd.Items.Clear();
+                foreach (Produto prod in produtos)
+                {
+                    var row = new string[] { prod.id.ToString(), prod.nome, prod.marca, prod.preco.ToString(), prod.quantidade.ToString(), prod.vendidos.ToString(), prod.getDemandaAnterior().ToString(), prod.getDemanda().ToString(), prod.dataVencimento.ToShortDateString() };
+                    var lvi = new ListViewItem(row);
+                    if(prod.verificaValidade())
+                    {
+                        lvi.ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        lvi.ForeColor = Color.Black;
+                    }
+
+                    lvi.Tag = prod;
+                    listViewProd.Items.Add(lvi);
+                }
+            }
+        }
     }
 }
