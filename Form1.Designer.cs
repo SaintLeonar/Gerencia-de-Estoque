@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.ColumnHeader Nome;
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -47,6 +47,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.DescontoVencimento = new System.Windows.Forms.TextBox();
+            this.DescontoDemanda = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             Nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -107,15 +111,15 @@
             this.listViewProd.Font = new System.Drawing.Font("Rubik", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewProd.FullRowSelect = true;
             this.listViewProd.GridLines = true;
-            listViewGroup2.Header = "ListViewGroup";
-            listViewGroup2.Name = "listViewGroup1";
+            listViewGroup1.Header = "ListViewGroup";
+            listViewGroup1.Name = "listViewGroup1";
             this.listViewProd.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup2});
+            listViewGroup1});
             this.listViewProd.HideSelection = false;
             this.listViewProd.Location = new System.Drawing.Point(168, 29);
             this.listViewProd.MultiSelect = false;
             this.listViewProd.Name = "listViewProd";
-            this.listViewProd.Size = new System.Drawing.Size(1033, 480);
+            this.listViewProd.Size = new System.Drawing.Size(1033, 433);
             this.listViewProd.TabIndex = 3;
             this.listViewProd.UseCompatibleStateImageBehavior = false;
             this.listViewProd.View = System.Windows.Forms.View.Details;
@@ -193,12 +197,49 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // DescontoVencimento
+            // 
+            this.DescontoVencimento.Location = new System.Drawing.Point(1051, 489);
+            this.DescontoVencimento.Name = "DescontoVencimento";
+            this.DescontoVencimento.Size = new System.Drawing.Size(60, 20);
+            this.DescontoVencimento.TabIndex = 7;
+            // 
+            // DescontoDemanda
+            // 
+            this.DescontoDemanda.Location = new System.Drawing.Point(1139, 489);
+            this.DescontoDemanda.Name = "DescontoDemanda";
+            this.DescontoDemanda.Size = new System.Drawing.Size(60, 20);
+            this.DescontoDemanda.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1048, 470);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Vencimento";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(1139, 470);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Demanda";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1213, 556);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.DescontoDemanda);
+            this.Controls.Add(this.DescontoVencimento);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -213,6 +254,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -234,6 +276,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox DescontoVencimento;
+        private System.Windows.Forms.TextBox DescontoDemanda;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

@@ -8,6 +8,9 @@ namespace backend
     {
         public List<Produto> produtos = new List<Produto>();
 
+        public double descontoVencimento = 0.5; // Caso queira alterar o desconto de vencimento basta alterar essa variável.
+        public double descontoDemanda = 0.2; // Caso queira alterar o desconto de Demanda basta alterar essa variável.
+
         public Estoque() { }
 
         /*
@@ -70,8 +73,7 @@ namespace backend
         */
         public void aplicaDesconto()
         {
-            double descontoVencimento = 0.5; // Caso queira alterar o desconto de vencimento basta alterar essa variável.
-            double descontoDemanda = 0.2; // Caso queira alterar o desconto de Demanda basta alterar essa variável.
+            
 
             foreach (Produto p in this.produtos)
             {

@@ -23,6 +23,11 @@ namespace GerenciamentoDeEstoqueInterface
         public void Form1_Load(object sender, EventArgs e)
         {
             UpdateList(sender, e);
+            if (estoqueAtual != null)
+            {
+                DescontoDemanda.Text = (estoqueAtual.descontoDemanda * 100).ToString() + "%";
+                DescontoVencimento.Text = (estoqueAtual.descontoVencimento * 100).ToString() + "%";
+            }
         }
         public void UpdateList(object sender, EventArgs e)
         {
@@ -134,6 +139,11 @@ namespace GerenciamentoDeEstoqueInterface
                     listViewProd.Items.Add(lvi);
                 }
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
