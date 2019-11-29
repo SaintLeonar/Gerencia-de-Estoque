@@ -1,21 +1,21 @@
-using System;
+﻿using System;
 
 namespace backend
 {
     public class Produto
     {
-        public int id {get; set;}
-        public string nome {get; set;}
-        public string marca {get;set;}
-        public string categoria {get; set;}
-        public double preco {get; set;}
-        public int quantidade {get;set;}
-        public int vendidos {get;set;}
+        public int id { get; set; }
+        public string nome { get; set; }
+        public string marca { get; set; }
+        public string categoria { get; set; }
+        public double preco { get; set; }
+        public int quantidade { get; set; }
+        public int vendidos { get; set; }
         private int demandaAnterior;
         private int demanda;
-        public DateTime dataVencimento {get;set;}
+        public DateTime dataVencimento { get; set; }
 
-        public Produto(){}
+        public Produto() { }
 
         public Produto(int id, string nome, string marca, string categoria, double preco, int quantidade, int vendidos, int demandaAnterior, int demanda, DateTime dataVencimento)
         {
@@ -67,7 +67,7 @@ namespace backend
         */
         public bool verificaEstoque()
         {
-            if(this.quantidade <= this.demanda*0.1)
+            if (this.quantidade <= this.demanda * 0.1)
             {
                 Console.WriteLine("Produto {0} - {1} Precisa de reabastecimento!\n", this.id, this.nome);
                 return true;
@@ -94,17 +94,17 @@ namespace backend
 
             int diasRestantes = (int)diff.TotalDays; // O método TotalDays realiza um parse para o número de dias em double. Ao fim foi feito um type casting para int.
 
-            if(diasRestantes <= 0)
+            if (diasRestantes <= 0)
             {
                 Console.WriteLine("Produto {0} - {1} {2} está vencido.\nLimpe o estoque desse produto!\n", this.id, this.nome, this.marca);
             }
             else
-                if(diasRestantes <= diasLimite)
-                {
-                    Console.WriteLine("Produto {0} - {1} {2} está a {3} dia(s) da data de vencimento.\nRecomenda-se aplicar descontos!\n", this.id, this.nome, this.marca, diasRestantes);
-                    return true;
-                }
-            
+                if (diasRestantes <= diasLimite)
+            {
+                Console.WriteLine("Produto {0} - {1} {2} está a {3} dia(s) da data de vencimento.\nRecomenda-se aplicar descontos!\n", this.id, this.nome, this.marca, diasRestantes);
+                return true;
+            }
+
             return false;
         }
     }

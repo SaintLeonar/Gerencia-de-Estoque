@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -8,7 +8,7 @@ namespace backend
     {
         public List<Produto> produtos = new List<Produto>();
 
-        public Estoque(){}
+        public Estoque() { }
 
         /*
         *   Reabastece o Estoque por completo
@@ -23,9 +23,9 @@ namespace backend
         */
         public void reabasteceEstoque()
         {
-            foreach(Produto p in this.produtos)
+            foreach (Produto p in this.produtos)
             {
-                if(p.verificaEstoque())
+                if (p.verificaEstoque())
                 {
                     p.quantidade += p.getDemanda() - (p.quantidade + p.vendidos);
                     Console.WriteLine("Produto {0} - {1} foi Reabastecido!\n", p.id, p.nome);
@@ -43,7 +43,7 @@ namespace backend
         */
         public void alertaVencimento()
         {
-            foreach(Produto p in this.produtos)
+            foreach (Produto p in this.produtos)
             {
                 p.verificaValidade();
             }
@@ -73,21 +73,21 @@ namespace backend
             double descontoVencimento = 0.5; // Caso queira alterar o desconto de vencimento basta alterar essa variável.
             double descontoDemanda = 0.2; // Caso queira alterar o desconto de Demanda basta alterar essa variável.
 
-            foreach(Produto p in this.produtos)
+            foreach (Produto p in this.produtos)
             {
-                if(p.verificaValidade())
+                if (p.verificaValidade())
                 {
                     Console.WriteLine("Aplicando desconto de {0} sobre o produto: {1} - {2} {3}", descontoVencimento, p.id, p.nome, p.marca);
-                    p.preco = p.preco*descontoVencimento;
+                    p.preco = p.preco * descontoVencimento;
                     p.showInfo();
                 }
                 else
-                    if(p.getDemanda() <= p.getDemandaAnterior()/2)
-                    {
-                        Console.WriteLine("Aplicando desconto de {0} sobre o produto: {1} - {2} {3}", descontoDemanda, p.id, p.nome, p.marca);
-                        p.preco = p.preco*descontoDemanda;
-                        p.showInfo();
-                    }
+                    if (p.getDemanda() <= p.getDemandaAnterior() / 2)
+                {
+                    Console.WriteLine("Aplicando desconto de {0} sobre o produto: {1} - {2} {3}", descontoDemanda, p.id, p.nome, p.marca);
+                    p.preco = p.preco * descontoDemanda;
+                    p.showInfo();
+                }
             }
         }
     }
