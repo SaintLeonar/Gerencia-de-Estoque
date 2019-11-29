@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            this.button1 = new System.Windows.Forms.Button();
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ColumnHeader Nome;
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.Produto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listViewProd = new System.Windows.Forms.ListView();
+            this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Marca = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Categoria = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Preço = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Qntd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Vendidos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DemandaAnterior = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DemandaAtual = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DataVencimento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            Nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(948, 121);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(265, 91);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // directorySearcher1
             // 
@@ -65,56 +65,114 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(168, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1045, 115);
+            this.panel2.Size = new System.Drawing.Size(1045, 23);
             this.panel2.TabIndex = 2;
             // 
-            // listView1
+            // listViewProd
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Produto});
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
-            this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(413, 217);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(222, 292);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listViewProd.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Id,
+            Nome,
+            this.Marca,
+            this.Categoria,
+            this.Preço,
+            this.Qntd,
+            this.Vendidos,
+            this.DemandaAnterior,
+            this.DemandaAtual,
+            this.DataVencimento});
+            this.listViewProd.Font = new System.Drawing.Font("Rubik", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewProd.FullRowSelect = true;
+            this.listViewProd.GridLines = true;
+            listViewGroup2.Header = "ListViewGroup";
+            listViewGroup2.Name = "listViewGroup1";
+            this.listViewProd.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup2});
+            this.listViewProd.HideSelection = false;
+            this.listViewProd.Location = new System.Drawing.Point(168, 29);
+            this.listViewProd.Name = "listViewProd";
+            this.listViewProd.Size = new System.Drawing.Size(1033, 480);
+            this.listViewProd.TabIndex = 3;
+            this.listViewProd.UseCompatibleStateImageBehavior = false;
+            this.listViewProd.View = System.Windows.Forms.View.Details;
+            this.listViewProd.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // Produto
+            // Nome
             // 
-            this.Produto.Text = "Produto";
-            this.Produto.Width = 88;
+            Nome.Text = "Nome";
+            Nome.Width = 88;
+            // 
+            // Id
+            // 
+            this.Id.Text = "ID";
+            // 
+            // Marca
+            // 
+            this.Marca.Text = "Marca";
+            // 
+            // Categoria
+            // 
+            this.Categoria.Text = "Categoria";
+            this.Categoria.Width = 82;
+            // 
+            // Preço
+            // 
+            this.Preço.Text = "Preço";
+            // 
+            // Qntd
+            // 
+            this.Qntd.Text = "Qntd";
+            // 
+            // Vendidos
+            // 
+            this.Vendidos.Text = "Vendidos";
+            // 
+            // DemandaAnterior
+            // 
+            this.DemandaAnterior.Text = "DemandaAnterior";
+            this.DemandaAnterior.Width = 103;
+            // 
+            // DemandaAtual
+            // 
+            this.DemandaAtual.Text = "Demanda Atual";
+            this.DemandaAtual.Width = 102;
+            // 
+            // DataVencimento
+            // 
+            this.DataVencimento.Text = "Data Vencimento";
+            this.DataVencimento.Width = 101;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1213, 556);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewProd);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader Produto;
+        private System.Windows.Forms.ListView listViewProd;
+        private System.Windows.Forms.ColumnHeader Id;
+        private System.Windows.Forms.ColumnHeader Marca;
+        private System.Windows.Forms.ColumnHeader Categoria;
+        private System.Windows.Forms.ColumnHeader Preço;
+        private System.Windows.Forms.ColumnHeader Qntd;
+        private System.Windows.Forms.ColumnHeader Vendidos;
+        private System.Windows.Forms.ColumnHeader DemandaAnterior;
+        private System.Windows.Forms.ColumnHeader DemandaAtual;
+        private System.Windows.Forms.ColumnHeader DataVencimento;
     }
 }
 

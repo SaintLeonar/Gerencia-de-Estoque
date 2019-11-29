@@ -52,7 +52,7 @@ namespace InterfaceGerEstoque
 
             Console.ReadLine();
 
-            Application.Run(new Form1());
+            Application.Run(new Form1(estoque));
         }
     }
 }

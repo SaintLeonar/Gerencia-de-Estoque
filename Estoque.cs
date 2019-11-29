@@ -90,5 +90,10 @@ namespace backend
                 }
             }
         }
+
+        public List<Produto> GetListaProdutos()
+        {
+            return this.produtos;
+        }
     }
 }

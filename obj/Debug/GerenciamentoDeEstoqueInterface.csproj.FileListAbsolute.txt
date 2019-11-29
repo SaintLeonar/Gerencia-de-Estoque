@@ -14,3 +14,12 @@ C:\Users\NICOLAS-LAPTOP\Documents\Gerencia-de-Estoque\obj\Debug\GerenciamentoDeE
 C:\Users\NICOLAS-LAPTOP\Documents\Gerencia-de-Estoque\obj\Debug\GerenciamentoDeEstoqueInterface.csproj.GenerateResource.cache
 C:\Users\NICOLAS-LAPTOP\Documents\Gerencia-de-Estoque\obj\Debug\GerenciamentoDeEstoqueInterface.exe
 C:\Users\NICOLAS-LAPTOP\Documents\Gerencia-de-Estoque\obj\Debug\GerenciamentoDeEstoqueInterface.pdb
+C:\Users\NICOLAS-LAPTOP\Documents\GDE\bin\Debug\GerenciamentoDeEstoqueInterface.exe.config
+C:\Users\NICOLAS-LAPTOP\Documents\GDE\bin\Debug\GerenciamentoDeEstoqueInterface.exe
+C:\Users\NICOLAS-LAPTOP\Documents\GDE\bin\Debug\GerenciamentoDeEstoqueInterface.pdb
+C:\Users\NICOLAS-LAPTOP\Documents\GDE\obj\Debug\GerenciamentoDeEstoqueInterface.csprojAssemblyReference.cache
+C:\Users\NICOLAS-LAPTOP\Documents\GDE\obj\Debug\GerenciamentoDeEstoqueInterface.Form1.resources
+C:\Users\NICOLAS-LAPTOP\Documents\GDE\obj\Debug\GerenciamentoDeEstoqueInterface.Properties.Resources.resources
+C:\Users\NICOLAS-LAPTOP\Documents\GDE\obj\Debug\GerenciamentoDeEstoqueInterface.csproj.GenerateResource.cache
+C:\Users\NICOLAS-LAPTOP\Documents\GDE\obj\Debug\GerenciamentoDeEstoqueInterface.exe
+C:\Users\NICOLAS-LAPTOP\Documents\GDE\obj\Debug\GerenciamentoDeEstoqueInterface.pdb
