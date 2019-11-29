@@ -31,6 +31,20 @@ namespace backend
             this.dataVencimento = dataVencimento;
         }
 
+        public Produto(Produto pr)
+        {
+            this.id = pr.id;
+            this.nome = pr.nome;
+            this.marca = pr.marca;
+            this.categoria = pr.categoria;
+            this.preco = pr.preco;
+            this.quantidade = pr.quantidade;
+            this.vendidos = pr.vendidos;
+            this.demandaAnterior = pr.demandaAnterior;
+            this.demanda = pr.demanda;
+            this.dataVencimento = pr.dataVencimento;
+        }
+
         public void setDemanda(int demanda)
         {
             this.demandaAnterior = this.demanda;
@@ -85,7 +99,7 @@ namespace backend
         *              OU caso o produto já esteja vencido. Nesse caso o sistema recomenda limpar o estoque;
         *
         */
-        public bool verificaValidade()
+        public int verificaValidade()
         {
             int diasLimite = 3; // Caso queira aumentar ou diminuir o limite de dias basta alterar nessa variável.
 
@@ -97,15 +111,15 @@ namespace backend
             if (diasRestantes <= 0)
             {
                 Console.WriteLine("Produto {0} - {1} {2} está vencido.\nLimpe o estoque desse produto!\n", this.id, this.nome, this.marca);
+                return -1;
             }
-            else
-                if (diasRestantes <= diasLimite)
+            else if (diasRestantes <= diasLimite)
             {
                 Console.WriteLine("Produto {0} - {1} {2} está a {3} dia(s) da data de vencimento.\nRecomenda-se aplicar descontos!\n", this.id, this.nome, this.marca, diasRestantes);
-                return true;
+                return 0;
             }
 
-            return false;
+            return 1;
         }
     }
 }

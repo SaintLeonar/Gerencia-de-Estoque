@@ -75,7 +75,7 @@ namespace backend
 
             foreach (Produto p in this.produtos)
             {
-                if (p.verificaValidade())
+                if (p.verificaValidade() == 0)
                 {
                     Console.WriteLine("Aplicando desconto de {0} sobre o produto: {1} - {2} {3}", descontoVencimento, p.id, p.nome, p.marca);
                     p.preco = p.preco * descontoVencimento;
