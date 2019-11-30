@@ -84,7 +84,7 @@ namespace GerenciamentoDeEstoqueInterface
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            preco = Convert.ToInt16(textBox4.Text);
+            preco = Convert.ToDouble(textBox4.Text);
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
