@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.ColumnHeader Nome;
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,9 +50,18 @@
             this.DemandaAtual = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DataVencimento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listViewProd = new System.Windows.Forms.ListView();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             Nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Nome
+            // 
+            Nome.Text = "Nome";
+            Nome.Width = 136;
             // 
             // directorySearcher1
             // 
@@ -63,6 +72,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -156,11 +166,6 @@
             // 
             this.Id.Text = "ID";
             // 
-            // Nome
-            // 
-            Nome.Text = "Nome";
-            Nome.Width = 136;
-            // 
             // Marca
             // 
             this.Marca.Text = "Marca";
@@ -208,10 +213,10 @@
             this.listViewProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewProd.FullRowSelect = true;
             this.listViewProd.GridLines = true;
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup4.Header = "ListViewGroup";
+            listViewGroup4.Name = "listViewGroup1";
             this.listViewProd.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1});
+            listViewGroup4});
             this.listViewProd.HideSelection = false;
             this.listViewProd.Location = new System.Drawing.Point(168, 29);
             this.listViewProd.MultiSelect = false;
@@ -223,12 +228,44 @@
             this.listViewProd.Click += new System.EventHandler(this.UpdateList);
             this.listViewProd.DoubleClick += new System.EventHandler(this.listViewProd_DoubleClick);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(441, 514);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(150, 30);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Inserir Item ";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(597, 514);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(136, 29);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "Remover Item";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(12, 489);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(118, 53);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "Fechar";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1213, 556);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DescontoDemanda);
@@ -244,6 +281,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -272,6 +310,9 @@
         private System.Windows.Forms.ColumnHeader DemandaAtual;
         private System.Windows.Forms.ColumnHeader DataVencimento;
         private System.Windows.Forms.ListView listViewProd;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 

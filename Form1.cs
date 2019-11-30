@@ -145,5 +145,26 @@ namespace GerenciamentoDeEstoqueInterface
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form2 popup = new Form2(this,estoqueAtual);
+            popup.Show(this);
+            //if (dialogresult == DialogResult.OK)
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (listViewProd.SelectedItems.Count > 0)
+            {
+               // Produto item = listViewProd.SelectedItems[0];
+                //rest of your logic
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
