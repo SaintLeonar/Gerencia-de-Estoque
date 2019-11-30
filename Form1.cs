@@ -156,13 +156,16 @@ namespace GerenciamentoDeEstoqueInterface
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Produto produto = new Produto();
+            Form3 popup = new Form3(this,estoqueAtual);
+            popup.Show(this);
+
+           /* Produto produto = new Produto();
             if (listViewProd.SelectedItems.Count >0)
             {
                 produto = (Produto)listViewProd.SelectedItems[0].Tag;
             }
             estoqueAtual.produtos.Remove(produto);
-            UpdateList(sender, e);
+            UpdateList(sender, e);*/
         }
         private void button6_Click(object sender, EventArgs e)
         {
