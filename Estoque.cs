@@ -80,14 +80,15 @@ namespace backend
                 if (p.verificaValidade() == 0)
                 {
                     Console.WriteLine("Aplicando desconto de {0} sobre o produto: {1} - {2} {3}", descontoVencimento, p.id, p.nome, p.marca);
-                    p.preco = p.preco * descontoVencimento;
+                    p.preco = p.preco * (1-descontoVencimento);
                     p.showInfo();
                 }
                 else
                     if (p.getDemanda() <= p.getDemandaAnterior() / 2)
                 {
                     Console.WriteLine("Aplicando desconto de {0} sobre o produto: {1} - {2} {3}", descontoDemanda, p.id, p.nome, p.marca);
-                    p.preco = p.preco * descontoDemanda;
+          
+                    p.preco = p.preco * (1 - descontoDemanda);
                     p.showInfo();
                 }
             }

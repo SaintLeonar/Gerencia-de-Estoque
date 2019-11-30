@@ -108,7 +108,7 @@ namespace backend
 
             int diasRestantes = (int)diff.TotalDays; // O método TotalDays realiza um parse para o número de dias em double. Ao fim foi feito um type casting para int.
 
-            if (diasRestantes <= 0)
+            if (diasRestantes < 0)
             {
                 Console.WriteLine("Produto {0} - {1} {2} está vencido.\nLimpe o estoque desse produto!\n", this.id, this.nome, this.marca);
                 return -1;

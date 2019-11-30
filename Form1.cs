@@ -62,7 +62,7 @@ namespace GerenciamentoDeEstoqueInterface
                     }
                     else if(prod.verificaValidade() == 0)
                     {
-                        lvi.ForeColor = Color.Yellow; // Produto perto do prazo de validade
+                        lvi.ForeColor = Color.DarkOrange; // Produto perto do prazo de validade
                     }
                     else if (prod.verificaValidade() == 1)
                     {
