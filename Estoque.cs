@@ -28,9 +28,11 @@ namespace backend
         {
             foreach (Produto p in this.produtos)
             {
+                p.preco = p.preco_inicial;
                 if (p.verificaEstoque())
                 {
                     p.quantidade += p.getDemanda() - (p.quantidade + p.vendidos);
+                    
                     Console.WriteLine("Produto {0} - {1} foi Reabastecido!\n", p.id, p.nome);
                     p.showInfo();
                 }

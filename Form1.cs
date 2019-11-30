@@ -14,6 +14,7 @@ namespace GerenciamentoDeEstoqueInterface
     public partial class Form1 : Form
     {
         private Estoque estoqueAtual;
+        private bool abastecido = true;
         public Form1(Estoque atualEstoque)
         {
             InitializeComponent();
@@ -78,7 +79,7 @@ namespace GerenciamentoDeEstoqueInterface
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (estoqueAtual != null)
+            if (estoqueAtual != null && abastecido == true)
             {
                 var oldProdutosList = new List<Produto>();
                 foreach (Produto produto in estoqueAtual.GetListaProdutos())
@@ -86,6 +87,7 @@ namespace GerenciamentoDeEstoqueInterface
                     oldProdutosList.Add(new Produto(produto));
                 }
                 estoqueAtual.aplicaDesconto();
+                abastecido = false;
                 var newProdutosList = estoqueAtual.GetListaProdutos();
 
                 listViewProd.Items.Clear();
@@ -128,6 +130,7 @@ namespace GerenciamentoDeEstoqueInterface
             if (estoqueAtual != null)
             {
                 estoqueAtual.reabasteceEstoque();
+                abastecido = true;
                 var produtos = estoqueAtual.GetListaProdutos();
                 listViewProd.Items.Clear();
                 foreach (Produto prod in produtos)

@@ -9,6 +9,7 @@ namespace backend
         public string marca { get; set; }
         public string categoria { get; set; }
         public double preco { get; set; }
+        public double preco_inicial;
         public int quantidade { get; set; }
         public int vendidos { get; set; }
         private int demandaAnterior;
@@ -24,6 +25,7 @@ namespace backend
             this.marca = marca;
             this.categoria = categoria;
             this.preco = preco;
+            this.preco_inicial = preco;
             this.quantidade = quantidade;
             this.vendidos = vendidos;
             this.demandaAnterior = demandaAnterior;
@@ -38,6 +40,7 @@ namespace backend
             this.marca = pr.marca;
             this.categoria = pr.categoria;
             this.preco = pr.preco;
+            this.preco_inicial = preco;
             this.quantidade = pr.quantidade;
             this.vendidos = pr.vendidos;
             this.demandaAnterior = pr.demandaAnterior;
