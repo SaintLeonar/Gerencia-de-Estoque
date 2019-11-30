@@ -28,6 +28,7 @@ namespace GerenciamentoDeEstoqueInterface
                 DescontoDemanda.Text = (estoqueAtual.descontoDemanda * 100).ToString() + "%";
                 DescontoVencimento.Text = (estoqueAtual.descontoVencimento * 100).ToString() + "%";
             }
+            listViewProd.Select();
         }
         public void UpdateList(object sender, EventArgs e)
         {
@@ -155,16 +156,24 @@ namespace GerenciamentoDeEstoqueInterface
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (listViewProd.SelectedItems.Count > 0)
+            Produto produto = new Produto();
+            if (listViewProd.SelectedItems.Count >0)
             {
-               // Produto item = listViewProd.SelectedItems[0];
-                //rest of your logic
+                produto = (Produto)listViewProd.SelectedItems[0].Tag;
             }
+            estoqueAtual.produtos.Remove(produto);
+            UpdateList(sender, e);
         }
-
         private void button6_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void listViewProd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+           // if (listViewProd.Items.Count > 0)
+//listViewProd.Items[0].Selected = true;
         }
     }
 }

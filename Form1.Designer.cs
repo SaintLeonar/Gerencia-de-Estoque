@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.ColumnHeader Nome;
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.listViewProd = new System.Windows.Forms.ListView();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             Nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,6 +78,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(168, 556);
             this.panel1.TabIndex = 1;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(12, 489);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(118, 53);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "Fechar";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel2
             // 
@@ -213,10 +223,10 @@
             this.listViewProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewProd.FullRowSelect = true;
             this.listViewProd.GridLines = true;
-            listViewGroup4.Header = "ListViewGroup";
-            listViewGroup4.Name = "listViewGroup1";
+            listViewGroup1.Header = "ListViewGroup";
+            listViewGroup1.Name = "listViewGroup1";
             this.listViewProd.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup4});
+            listViewGroup1});
             this.listViewProd.HideSelection = false;
             this.listViewProd.Location = new System.Drawing.Point(168, 29);
             this.listViewProd.MultiSelect = false;
@@ -225,6 +235,7 @@
             this.listViewProd.TabIndex = 3;
             this.listViewProd.UseCompatibleStateImageBehavior = false;
             this.listViewProd.View = System.Windows.Forms.View.Details;
+            this.listViewProd.SelectedIndexChanged += new System.EventHandler(this.listViewProd_SelectedIndexChanged);
             this.listViewProd.Click += new System.EventHandler(this.UpdateList);
             this.listViewProd.DoubleClick += new System.EventHandler(this.listViewProd_DoubleClick);
             // 
@@ -247,16 +258,6 @@
             this.button5.Text = "Remover Item";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(12, 489);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(118, 53);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Fechar";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 
